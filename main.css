@@ -1,0 +1,97 @@
+@import url("/assets/css/bootstrap.min.css");
+@import url("/assets/css/hover.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Poppins:500,700');
+
+
+
+
+/*
+color: #5E6973; grey
+background-color: #C4FFF9; pale blue
+background-color: #9CEAEF; regular blue
+background-color: #07BEB8; deep blue (white text)
+*/
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+/* Chat Specific */
+.messageSender {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #07BEB8;
+}
+
+/* Dashboard Specific */
+#dash {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+#dash a {
+  color: #07BEB8;
+}
+
+/* Easy Button Specific */
+#easy {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  border-color: black;
+  background-color: red;
+  font-size: 50px;
+  color: white;
+}
+
+/* Sketchpad Specific */
+#sketch {
+  width: 500px;
+  height: 500px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  margin: auto;
+}
+
+#myCanvas {
+  height: 75%;
+  width: 100%;
+}
+
+#controls {
+  width: 400px;
+  margin: auto;
+}
+
+/* Platform Runner Specific */
+#startScreen {
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  margin: auto;
+
+}
+
+#startButton {
+  position: absolute;
+}
+
+#flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
