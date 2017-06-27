@@ -2,15 +2,12 @@
 @import url("/assets/css/hover.css");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Poppins:500,700');
 
-
-
-
-/*
-color: #5E6973; grey
-background-color: #C4FFF9; pale blue
-background-color: #9CEAEF; regular blue
-background-color: #07BEB8; deep blue (white text)
-*/
+  /*
+  color: #5E6973; grey
+  background-color: #C4FFF9; pale blue
+  background-color: #9CEAEF; regular blue
+  background-color: #07BEB8; deep blue (white text)
+  */
 
 html, body {
   height: 100%;
@@ -24,8 +21,17 @@ p {
   font-family: 'Open Sans', sans-serif;
 }
 
+h1 a, h1 a:hover, h1 a:active, h1 a:focus {
+  color: black;
+  text-decoration: underline
+}
+
 .container {
   padding-top: 10px;
+}
+
+.navigate {
+  margin-bottom: 10px;
 }
 
 /* Chat Specific */
@@ -61,15 +67,7 @@ p {
 #sketch {
   width: 500px;
   height: 500px;
-  border: 2px;
-  border-style: solid;
-  border-color: black;
-  margin: auto;
-}
-
-#myCanvas {
-  height: 75%;
-  width: 100%;
+  border: 2px solid black;
 }
 
 #controls {
@@ -94,4 +92,51 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Custom Button Specific */
+.btn-teal {
+  color: #ffffff;
+  background-color: #07BEB8;
+  border-color: #026663;
+}
+
+.btn-teal:hover,
+.btn-teal:focus,
+.btn-teal:active,
+.btn-teal.active,
+.open .dropdown-toggle.btn-teal {
+  color: #ffffff;
+  background-color: #27A39F;
+  border-color: #026663;
+}
+
+.btn-teal:active,
+.btn-teal.active,
+.open .dropdown-toggle.btn-teal {
+  background-image: none;
+}
+
+.btn-teal.disabled,
+.btn-teal[disabled],
+fieldset[disabled] .btn-teal,
+.btn-teal.disabled:hover,
+.btn-teal[disabled]:hover,
+fieldset[disabled] .btn-teal:hover,
+.btn-teal.disabled:focus,
+.btn-teal[disabled]:focus,
+fieldset[disabled] .btn-teal:focus,
+.btn-teal.disabled:active,
+.btn-teal[disabled]:active,
+fieldset[disabled] .btn-teal:active,
+.btn-teal.disabled.active,
+.btn-teal[disabled].active,
+fieldset[disabled] .btn-teal.active {
+  background-color: #07BEB8;
+  border-color: #026663;
+}
+
+.btn-teal .badge {
+  color: #07BEB8;
+  background-color: #ffffff;
 }

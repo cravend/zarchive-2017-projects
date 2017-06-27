@@ -11,12 +11,17 @@ var player;
 var isGameOver;
 var isGameStarted;
 var score;
-var screenWidth = "100%";
-var screenHeight = "75%";
+// var screenWidth = $(window).width();
+// var screenHeight = $(window).height();
+var parent = document.getElementById('flex');
+var screenWidth = parent.getClientRects()[0].width;
+// var screenHeight = parent.getClientRects()[0].height;
+// var screenHeight *= .75;
+var screenHeight = screenWidth * .5;
 var canvas;
 
 function setup() {
-  canvas = createCanvas(400,300)
+  canvas = createCanvas(screenWidth,screenHeight)
   canvas.parent("#flex");
   // canvas.style.width(100%);
   // canvas.addClass("gameArea")
@@ -25,14 +30,16 @@ function setup() {
   // canvas.parent('#flex');
   isGameOver = false;
   score=0;
-  background(150, 200, 250);
+  background(196, 255, 249);
   groundSprites = new Group();
   numGroundSprites = width/GROUND_SPRITE_WIDTH + 1;
   for (var n = 0; n < numGroundSprites; n++) {
     var groundSprite = createSprite(n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
+    groundSprite.shapeColor = color(94,105,115);
     groundSprites.add(groundSprite);
   }
   player = createSprite(100, height-75, 50, 50);
+  player.shapeColor = color(7, 190, 184);
   obstacleSprites = new Group();
   decorationSprites = new Group();
   var firstGroundSprite = groundSprites[0];
@@ -59,7 +66,7 @@ function draw() {
       text("Your score was: " + score, camera.position.x, camera.position.y - 20);
       text("Game Over! Click anywhere to restart", camera.position.x, camera.position.y);
     } else {
-      background(150, 200, 250);
+      background(196, 255, 249);
       player.velocity.y = player.velocity.y + GRAVITY;
       player.position.x = player.position.x + 5;
       camera.position.x = camera.position.x + 5;
@@ -80,10 +87,20 @@ function draw() {
       if (random() > 0.95) {
         var decoration = createSprite(camera.position.x + width,  random(0, (height-50)-50), 5, 5);
         decorationSprites.add(decoration);
+        if (random() < 0.5) {
+          decoration.shapeColor = color(156,234,239);
+        } else {
+          decoration.shapeColor = color(94,105,115);
+        }
       }
       if (random() > 0.95) {
         var obstacle = createSprite(camera.position.x + width,  random(0, (height-50)-15), 30, 30);
         obstacleSprites.add(obstacle);
+        if (random() < 0.5) {
+          obstacle.shapeColor = color(156,234,239);
+        } else {
+          obstacle.shapeColor = color(94,105,115);
+        }
       }
       var firstDecoration = decorationSprites[0];
       if (decorationSprites.length > 0 && firstDecoration.position.x <= camera.position.x - (width/2 + firstDecoration.width/2)) {

@@ -10,23 +10,10 @@
   <link href="/main.css" rel="stylesheet">
 </head>
 <body>
-  <ul class="nav">
-    <li class="nav-top"><a href="/">Home</a></li>
-    <li class="nav-top"><a href="">Workshops</a>
-      <div class="nav-dropdown-content">
-        <a href="/dodge">Meteor Dodge</a>
-        <a href="/platform">Platform Runner</a>
-        <a href="/sketchpad">Collaborative Sketchpad</a>
-        <a href="/chat">Chat</a>
-        <a href="/bigfoot">Bigfoot</a>
-        <a href="/geometric_pattern">Geometric Pattern</a>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/that_was_easy">That was Easy</a>
-      </div>
-    </li>
-  </ul>
-  <div id="content">
-    <div id="sketch"></div>
+  <div class="container">
+    <div id="sketch">
+      <!-- <canvas id="canvasy"></canvas> -->
+    </div>
     <hr style="width: 504px;">
     <div id="controls">
       <button id="saveDrawing">Save to Computer</button>
@@ -41,8 +28,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="app.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="app-old.js"></script>
   </div>
 </body>
 </html>
