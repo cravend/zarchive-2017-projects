@@ -2,12 +2,12 @@
 @import url("/assets/css/hover.css");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Poppins:500,700');
 
-  /*
-  color: #5E6973; grey
-  background-color: #C4FFF9; pale blue
-  background-color: #9CEAEF; regular blue
-  background-color: #07BEB8; deep blue (white text)
-  */
+/*
+color: #5E6973; grey
+background-color: #C4FFF9; pale blue
+background-color: #9CEAEF; regular blue
+background-color: #07BEB8; deep blue (white text)
+*/
 
 html, body {
   height: 100%;
@@ -93,6 +93,11 @@ h1 a, h1 a:hover, h1 a:active, h1 a:focus {
   align-items: center;
   justify-content: center;
 }
+
+/* Music Notes */
+
+
+
 
 /* Custom Button Specific */
 .btn-teal {
